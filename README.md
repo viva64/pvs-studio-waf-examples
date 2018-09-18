@@ -10,17 +10,17 @@ The used WAF version has to be rebuilt with the following parameters:
 
 You need to copy the new WAF file in your project.
 
-In the file wscript (in your project) you need to add the following string:
+In the file `wscript` (in your project) you need to add the following string:
 
 ```conf.load('clang_compilation_database')```
 
-Usually it is added in the end of the function def configure(conf).
+Usually it is added in the end of the function `def configure(conf)`.
 
 After building a project, for example, by such a command:
 
 ```python ./waf configure build```
 
-the file compile_commands.json, which is needed for this analysis mode, appears in the directory with the project.
+the file **compile_commands.json**, which is needed for this analysis mode, appears in the directory with the project.
 
 ## Running analysis in different OSs: ##
 
@@ -28,6 +28,6 @@ the file compile_commands.json, which is needed for this analysis mode, appears 
 
 ```"C:\Program Files (x86)\PVS-Studio\CompilerCommandsAnalyzer.exe" analyze -f build/compile_commands.json ...```
 
-### Linux: ###
+### Linux/macOS: ###
 
 ```pvs-studio-analyzer analyze -f build/compile_commands.json ...```
