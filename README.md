@@ -1,5 +1,3 @@
-**Note: This analysis mode will be available in the next version of the analyzer (PVS-Studio 6.26)**
-
 # Examples of PVS-Studio integration in WAF Build System #
 
 The supported version: **waf-1.8.0** or later.
